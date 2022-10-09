@@ -32,11 +32,20 @@ function delay() {
 }
 
 delay();
-
+var fastTime = 0;
 document.getElementById("shape").onclick = function () {
     document.getElementById("shape").style.display = "none";
     var end = new Date().getTime();
     var timeTaken = (end - start) / 1000;
+    
+    if(fastTime===0)
+    {  fastTime = timeTaken ;}
+    else 
+    {
+        if(fastTime > timeTaken)
+        {fastTime = timeTaken};
+    }
     document.getElementById("timeTaken").innerHTML = timeTaken + "seconds!";
+    document.getElementById("fastTime").innerHTML= fastTime + "Seconds!";
     delay();
 }
