@@ -1,3 +1,5 @@
+var goalTime = 0.5;
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -45,7 +47,12 @@ document.getElementById("shape").onclick = function () {
         if(fastTime > timeTaken)
         {fastTime = timeTaken};
     }
+    
     document.getElementById("timeTaken").innerHTML = timeTaken + "seconds!";
     document.getElementById("fastTime").innerHTML= fastTime + "Seconds!";
+    if(goalTime>timeTaken){
+        fastTime == timeTaken;
+        alert("Congratulations, You beat the Goal Time, Goal time = " + timeTaken);
+    }
     delay();
 }
