@@ -1,4 +1,11 @@
 var goalTime = 0.5;
+var playerName = "";
+
+document.getElementById("submitBtn").onclick = function() {
+   
+    playerName = document.getElementById("inputName").value;
+    document.getElementById("displayName").innerHTML = "Hi " + playerName + ", Do you have te Fastest Reaction?";
+}
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
