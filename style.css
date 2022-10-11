@@ -17,6 +17,20 @@ p {
     font-weight: 200%;
 }
 
+#inputName{
+    width: 100px;
+    height: 20px;
+    color: rgb(33, 43, 177);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+#displayName{
+    color: rgb(37, 172, 41);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder; 
+}
+
 #timeTaken {
     color: blue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
