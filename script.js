@@ -4,7 +4,7 @@ var playerName = "";
 document.getElementById("submitBtn").onclick = function() {
    
     playerName = document.getElementById("inputName").value;
-    document.getElementById("displayName").innerHTML = "Hi " + playerName + ", Do you have te Fastest Reaction?";
+    document.getElementById("displayName").innerHTML = "Hi " + playerName + ", Do you have the Fastest Reaction?";
 }
 
 function getRandomColor() {
