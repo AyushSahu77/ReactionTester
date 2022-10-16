@@ -42,6 +42,11 @@ function delay() {
 
 delay();
 var fastTime = 0;
+
+const congratulate = (timeTaken) => {
+  alert("Congratulations, You beat the Goal Time. \nNew Fastest time = " + timeTaken)
+}
+
 document.getElementById("shape").onclick = function () {
     document.getElementById("shape").style.display = "none";
     var end = new Date().getTime();
@@ -59,7 +64,7 @@ document.getElementById("shape").onclick = function () {
     document.getElementById("fastTime").innerHTML= fastTime + "Seconds!";
     if(goalTime>timeTaken){
         fastTime == timeTaken;
-        alert("Congratulations, You beat the Goal Time, Goal time = " + timeTaken);
+        setTimeout(congratulate, 100, timeTaken);
     }
     delay();
 }
