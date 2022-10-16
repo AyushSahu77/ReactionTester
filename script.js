@@ -43,8 +43,12 @@ function delay() {
 delay();
 var fastTime = 0;
 
-const congratulate = (timeTaken) => {
-  alert("Congratulations, You beat the Goal Time. \nNew Fastest time = " + timeTaken)
+const congratulateRecord = (timeTaken) => {
+  alert("Congratulations, You have beaten your record. \nNew Fastest Reaction Time = " + timeTaken)
+}
+
+const goalClearHandLer = (timeTaken, fastTime) => {
+  alert(`Congratulations, You have cleared the goal but missed the record by ${+(timeTaken - fastTime).toFixed(4)} seconds`)
 }
 
 document.getElementById("shape").onclick = function () {
@@ -63,8 +67,8 @@ document.getElementById("shape").onclick = function () {
     document.getElementById("timeTaken").innerHTML = timeTaken + "seconds!";
     document.getElementById("fastTime").innerHTML= fastTime + "Seconds!";
     if(goalTime>timeTaken){
-        fastTime == timeTaken;
-        setTimeout(congratulate, 100, timeTaken);
+        if(fastTime == timeTaken) {setTimeout(congratulateRecord, 100, fastTime)}
+        else setTimeout(goalClearHandLer, 100, timeTaken, fastTime);
     }
     delay();
 }
