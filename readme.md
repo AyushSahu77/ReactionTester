@@ -1,3 +1,3 @@
-Reaction Tester Game
+# Reaction Tester Game
 
-Do you have the fastest reaction????
+## _Do you have the fastest reaction????_
